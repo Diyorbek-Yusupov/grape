@@ -12,7 +12,7 @@
   &.navbar-active {
     top: -7rem;
     position: fixed;
-    background-color: $green;
+    background: $redBackground;
     animation: fixed 1s forwards;
   }
 
