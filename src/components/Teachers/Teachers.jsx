@@ -204,7 +204,7 @@ const Teachers = () => {
       <div className="teachers__container">
         <h1 className="teachers__title">{t("teacher.header")}</h1>
       </div>
-      {/* <div className="teachers__img-wrapper">
+      <div className="teachers__img-wrapper">
         {images.map((img, i) =>
           isDesktop ? (
             <motion.div
@@ -223,7 +223,7 @@ const Teachers = () => {
           )
         )}
 
-      </div> */}
+      </div>
       <div className="slider-container">
         <div className="teachers__img-wrapp">
           <Slider
