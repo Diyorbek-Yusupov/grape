@@ -20,17 +20,23 @@
     text-align: center;
 
     a {
-      background-color: $blue;
+      background-color: $reddishBrown;
       font-size: 2.2rem;
       color: $white;
       padding: 1.5rem 2rem;
-      border: 2px solid $blue;
+      border: 2px solid $redBackground;
       transition: all 0.2s ease;
 
       &:hover {
         background-color: transparent;
-        color: $blue;
+        color: $reddishBrown;
       }
     }
+  }
+
+  &-card-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
   }
 }
