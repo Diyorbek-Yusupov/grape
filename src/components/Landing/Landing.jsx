@@ -9,7 +9,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const leftSideSlider = [
   {
-    title: "Yorem ipsum dolor ",
+    title: "Учебный центр Виноградарства!",
     desc: "Torem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
@@ -119,7 +119,7 @@ const Landing = () => {
                     activeDot === i ? "active-slider" : ""
                   }`}
                   style={{
-                    transform: `translateX(${sliderPosition + 3}px)`,
+                    transform: `translateX(${sliderPosition}px)`,
                   }}
                   key={i}
                 >

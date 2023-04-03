@@ -6,13 +6,98 @@ import axios from "axios";
 import { Card } from "../../";
 import { getContent } from "../../../utils/changeLang";
 
+const obj = {
+  img: "https://picsum.photos/400/400",
+  title_ru: "Porem ipsum dolor",
+  title_uz: "Porem ipsum dolor",
+  link: "",
+  date: Date.now(),
+  short_content_ru: "Morem ipsum dolor sit amet, consectetur",
+  short_content_uz: "Morem ipsum dolor sit amet, consectetur",
+};
+
 const Courses = () => {
   const [current, setCurrent] = useState(0);
-  const [data, setData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
-  const [tab, setTab] = useState([]);
+  const [data, setData] = useState([
+    {
+      img: "https://picsum.photos/400/400",
+      title_ru: "Porem ipsum dolor",
+      title_uz: "Porem ipsum dolor",
+      link: "",
+      date: Date.now(),
+      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
+      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
+    },
+    {
+      img: "https://picsum.photos/400/400",
+      title_ru: "Porem ipsum dolor",
+      title_uz: "Porem ipsum dolor",
+      link: "",
+      date: Date.now(),
+      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
+      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
+    },
+    {
+      img: "https://picsum.photos/400/400",
+      title_ru: "Porem ipsum dolor",
+      title_uz: "Porem ipsum dolor",
+      link: "",
+      date: Date.now(),
+      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
+      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
+    },
+    {
+      img: "https://picsum.photos/400/400",
+      title_ru: "Porem ipsum dolor",
+      title_uz: "Porem ipsum dolor",
+      link: "",
+      date: Date.now(),
+      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
+      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
+    },
+  ]);
+  const [filteredData, setFilteredData] = useState([
+    {
+      img: "https://picsum.photos/400/400",
+      title_ru: "Porem ipsum dolor",
+      title_uz: "Porem ipsum dolor",
+      link: "",
+      date: new Date(),
+      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
+      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
+    },
+    {
+      img: "https://picsum.photos/400/400",
+      title_ru: "Porem ipsum dolor",
+      title_uz: "Porem ipsum dolor",
+      link: "",
+      date: new Date(),
+      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
+      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
+    },
+    {
+      img: "https://picsum.photos/400/400",
+      title_ru: "Porem ipsum dolor",
+      title_uz: "Porem ipsum dolor",
+      link: "",
+      date: new Date(),
+      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
+      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
+    },
+    {
+      img: "https://picsum.photos/400/400",
+      title_ru: "Porem ipsum dolor",
+      title_uz: "Porem ipsum dolor",
+      link: "",
+      date: new Date(),
+      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
+      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
+    },
+  ]);
+  const [tab, setTab] = useState(["tab1", "tab2", "tab3", "tab4"]);
 
   useEffect(() => {
+    return;
     axios
       .get(`${process.env.REACT_APP_API_URL}courses/get-main`)
       .then((res) => {
@@ -25,7 +110,6 @@ const Courses = () => {
         setTab(res.data.data.result);
       });
   }, []);
-
 
   const handleTabClick = (index) => {
     setCurrent(index);
