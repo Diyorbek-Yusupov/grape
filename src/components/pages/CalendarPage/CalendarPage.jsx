@@ -26,7 +26,6 @@ const CalendarPage = () => {
 		"Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, corrupti?",
 	]);
 	const { t } = useTranslation();
-
 	useEffect(() => {
 		const uniqueDates = Array.from(
 			new Set(
