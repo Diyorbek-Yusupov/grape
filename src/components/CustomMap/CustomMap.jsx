@@ -12,7 +12,7 @@ const CustomMap = () => {
       maxZoom: 18,
     }).addTo(myMap);
 
-    const marker1 = L.marker([41.3240686, 69.2532404])
+    L.marker([41.3240686, 69.2532404])
       .addTo(myMap)
       .bindPopup("Tashkent")
       .on("click", (e) => {
@@ -21,7 +21,7 @@ const CustomMap = () => {
         myMap.on("popupopen", () => {});
       });
 
-    const marker2 = L.marker([59.9668311, 30.3128765])
+    L.marker([59.9668311, 30.3128765])
       .addTo(myMap)
       .bindPopup('Школа сомелье "WineJet"')
       .on("click", (e) => {

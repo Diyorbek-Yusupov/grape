@@ -87,13 +87,14 @@ function CustomRightArrow({ className, style, onClick }) {
 }
 
 const Teachers = () => {
-	const [data, setData] = useState([]);
+	const [data, setData] = useState([images]);
 	const [selectedImage, setSelectedImage] = useState(null);
 	const { ref, inView } = useInView({
 		threshold: 0.5,
 	});
 
 	useEffect(() => {
+		return
 		axios
 			.get(`${process.env.REACT_APP_API_URL}teachers/get-main`)
 			.then((res) => {
@@ -103,9 +104,9 @@ const Teachers = () => {
 			});
 	}, []);
 
-	useEffect(() => {
-		setSelectedImage(data[0]);
-	}, [data]);
+	// useEffect(() => {
+	// 	setSelectedImage(data[0]);
+	// }, [data]);
 	let slidesShow = data?.length >= 5 ? 5 : data?.length;
 	const settings = {
 		dots: false,

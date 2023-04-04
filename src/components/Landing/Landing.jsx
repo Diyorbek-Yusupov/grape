@@ -1,5 +1,5 @@
 import "./Landing.scss";
-import React, { useCallback } from "react";
+import React from "react";
 import { useState, useEffect } from "react";
 import { HiOutlineCalendar } from "react-icons/hi";
 import { AiOutlineClockCircle } from "react-icons/ai";
