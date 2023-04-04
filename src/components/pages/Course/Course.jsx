@@ -8,6 +8,26 @@ import i18next from "i18next";
 import { months } from "../../../utils/customLang";
 import { getContent } from "../../../utils/changeLang";
 
+const img = [
+  { img: "/images/grape1.png" },
+  { img: "/images/grape2.png" },
+  { img: "/images/grape3.png" },
+  { img: "/images/grape4.png" },
+];
+
+const staticData = {
+  data: {
+    img: img[2],
+    title_ru: "Porem ipsum dolor ",
+    title_uz: "Porem ipsum dolor",
+    link: "",
+    created_on: Date.now(),
+    short_content_ru: "Morem ipsum dolor sit amet, consectetur",
+    short_content_uz: "Morem ipsum dolor sit amet, consectetur",
+    price: "200.000",
+  },
+};
+
 const data1 = [
   "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac ",
   "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac ",
@@ -18,18 +38,11 @@ const data1 = [
 const Course = () => {
   const currentLanguage = i18next.language;
   const [openModal, setOpenModal] = useState(false);
-  const [data, setData] = useState({
-    title_ru: "",
-    title_uz: "",
-    short_content_ru: "",
-    short_content_uz: "",
-    price: "",
-    created_on: new Date(),
-    file_name: "",
-  });
+  const [data, setData] = useState(staticData.data);
   const params = useParams();
   const alias = params.slug;
   useEffect(() => {
+    return;
     axios
       .get(`${process.env.REACT_APP_API_URL}courses/get-alias/${alias}`)
       .then((res) => {
@@ -73,10 +86,7 @@ const Course = () => {
             </div>
             <div className="course-page__left">
               <div className="img-wrapper-course-page">
-                <img
-                  src={process.env.REACT_APP_FILE_URL + data.file_name}
-                  alt=""
-                />
+                <img src={data.img} alt="" />
               </div>
             </div>
           </div>

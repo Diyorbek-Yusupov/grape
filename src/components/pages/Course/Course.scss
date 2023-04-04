@@ -33,7 +33,7 @@
     }
     div {
       transform: translateX(5rem);
-      background-color: $blue;
+      background: $reddishBrown;
       padding: 4.5rem 8.8rem;
       width: 70.7rem;
 
@@ -48,7 +48,6 @@
 
     h1 {
       font-size: 3.6rem;
-      color: #414141;
       font-family: "NextArt-Bold", sans-serif;
 
       @include tablet {
@@ -88,7 +87,7 @@
     padding: 1.5rem 3rem;
     color: $white;
     font-size: 2.8rem;
-    background-color: $red;
+    background: $redBackground;
 
     @include tablet {
       font-size: 2rem;
@@ -98,6 +97,10 @@
     width: 61.7rem;
     height: 91rem;
     overflow: hidden;
+
+    img {
+      object-fit: cover;
+    }
 
     &:hover img {
       transform: scale(1.1);
@@ -130,7 +133,6 @@
     h1 {
       font-size: 4.4rem;
       font-family: "NextArt-Bold", sans-serif;
-      color: #414141;
       margin-bottom: 5.8rem;
       text-align: center;
     }
@@ -150,7 +152,6 @@
 
   &__cards {
     width: 45%;
-    background-color: blanchedalmond;
     display: flex;
     padding: 0 1rem;
     align-items: center;
@@ -164,17 +165,13 @@
       width: 100%;
     }
 
+    background: $reddishBrown !important;
+
     &:nth-child(2) {
-      background-color: $green;
+      background: $redBackground !important;
     }
-
     &:nth-child(3) {
-      background-color: $red;
-    }
-
-    &:nth-child(1),
-    &:nth-child(4) {
-      background-color: $blue;
+      background: $redBackground !important;
     }
 
     p {

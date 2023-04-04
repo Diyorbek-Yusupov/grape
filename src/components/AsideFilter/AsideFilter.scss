@@ -4,9 +4,9 @@
   &__side-container {
     position: fixed;
     left: -40rem;
-    z-index: 55;
+    z-index: 10000;
     top: 0;
-    background-color: $green;
+    background: $redBackground;
     padding: 4rem;
     bottom: 0;
     width: 40rem;
@@ -35,7 +35,7 @@
 
   &__titles {
     font-size: 2.4rem;
-    color: #414141;
+    color: #fff;
     margin-bottom: 3.2rem;
   }
 
@@ -50,7 +50,7 @@
       background-color: transparent;
       width: 80%;
       font-size: 2rem;
-      color: #414141;
+      color: #fff;
 
       @include tablet {
         width: 100%;
