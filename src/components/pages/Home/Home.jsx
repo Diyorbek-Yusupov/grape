@@ -7,11 +7,12 @@ import { Link } from "react-router-dom";
 import { useMediaQuery } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
+import SectionMap from "../../SectionMap/SectionMap";
 
 const staticData = {
   courses: [
     {
-      img: "https://picsum.photos/400/400",
+      img: "/images/course-img1.png",
       title_ru: "Курсы Официанта",
       title_uz: "Курсы Официанта",
       link: "",
@@ -22,7 +23,7 @@ const staticData = {
         "Мы поможем вам получить все  самые важные и необходимые знания в данной сфере деятельности!",
     },
     {
-      img: "https://picsum.photos/400/400",
+      img: "/images/course-img2.png",
       title_ru: "Курсы Официанта",
       title_uz: "Курсы Официанта",
       link: "",
@@ -124,6 +125,7 @@ const Home = () => {
       <Teachers />
       {/* <Section5 /> */}
       <Section6 />
+      <SectionMap />
     </div>
   );
 };
