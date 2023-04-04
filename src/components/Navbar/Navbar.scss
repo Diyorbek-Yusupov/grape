@@ -1,7 +1,7 @@
 @import "../../styles/styles.scss";
 
 .navbar {
-  padding: 1.3rem 3rem;
+  padding: 1.3rem 5rem;
   background-color: transparent;
   position: absolute;
   top: 0;
@@ -121,9 +121,9 @@
 }
 
 .active-link {
-  text-decoration: underline;
+  color: #000 !important;
 
   span {
-    color: $blue !important;
+    color: #000;
   }
 }

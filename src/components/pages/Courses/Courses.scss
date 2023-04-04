@@ -5,6 +5,7 @@
   background-size: cover !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
+  margin-top: 3rem;
 
   &__container {
     max-width: 133rem;
@@ -29,9 +30,9 @@
       font-family: "NextArt-Bold", sans-serif;
       padding-left: 1rem;
       font-size: 4.4rem;
-      color: $blue;
+      color: #d22630;
       margin-bottom: 2rem;
-      border-left: 0.7rem solid $blue;
+      border-left: 0.7rem solid #d22630;
 
       @include laptop {
         font-size: 3rem;

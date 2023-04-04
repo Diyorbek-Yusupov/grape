@@ -103,7 +103,7 @@ const Courses = () => {
         className="courses"
         style={{
           background:
-            "linear-gradient(90deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/courses-back.png)",
+            "linear-gradient(90deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/courses-bg.png)",
         }}
       >
         <div className="courses__container">
