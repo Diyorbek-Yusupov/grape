@@ -69,14 +69,14 @@
 			flex-direction: column;
 		}
 
-		&:nth-child(odd) {
-			.calendar__weekDay {
-				background-color: $blue;
-			}
-			.calendar__hour-info {
-				border-color: $blue;
-			}
-		}
+		// &:nth-child(odd) {
+		// 	.calendar__weekDay {
+		// 		background-color: red;
+		// 	}
+		// 	.calendar__hour-info {
+		// 		border-color: red;
+		// 	}
+		// }
 	}
 
 	&__weekDay {

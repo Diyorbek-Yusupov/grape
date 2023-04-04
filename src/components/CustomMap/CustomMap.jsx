@@ -12,21 +12,21 @@ const CustomMap = () => {
       maxZoom: 18,
     }).addTo(myMap);
 
-    const marker1 = L.marker([41.299938, 69.2411461])
+    const marker1 = L.marker([41.3240686, 69.2532404])
       .addTo(myMap)
       .bindPopup("Tashkent")
       .on("click", (e) => {
         e.target.openPopup();
-        myMap.flyTo(e.target.getLatLng(), 13.86, { duration: 1 });
+        myMap.flyTo(e.target.getLatLng(), 18, { duration: 1 });
         myMap.on("popupopen", () => {});
       });
 
-    const marker2 = L.marker([59.9326159, 30.3551544])
+    const marker2 = L.marker([59.9668311, 30.3128765])
       .addTo(myMap)
-      .bindPopup("Sankt Peterburg")
+      .bindPopup('Школа сомелье "WineJet"')
       .on("click", (e) => {
         // e.target.openPopup();
-        myMap.flyTo(e.target.getLatLng(), 12.65, { duration: 1 });
+        myMap.flyTo(e.target.getLatLng(), 18, { duration: 1 });
         // myMap.on("popupopen", () => {
 
         // });
