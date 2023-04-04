@@ -9,8 +9,8 @@ import SideMenu from "./SideMenu/SideMenu";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
 import { getContent } from "../../utils/changeLang";
+import { Link as Scroll } from "react-scroll";
 import { links, translations } from "./links";
-
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isActive, setIsActive] = useState(false);
@@ -22,10 +22,10 @@ const Navbar = () => {
     setExpanded(isExpanded ? panel : false);
   };
 
-  // useEffect(() => {
-  //   axios.get(`${process.env.REACT_APP_API_URL}menu/get`).then((res) => {
-  //     setData(res?.data?.data?.result);
-  //   });
+  useEffect(() => {
+    axios.get(`${process.env.REACT_APP_API_URL}menu/get`).then((res) => {
+      setData(res.data.data.result);
+    });
     if (pathname === "/") {
       setIsScrolled(false);
       const handleScroll = () => {
@@ -46,12 +46,10 @@ const Navbar = () => {
 
   const getLinkClassName = (pathname, link) =>
     pathname.split("/")[1] === link ? "active-link" : "";
-
   const { t, i18n } = useTranslation();
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
-
   return (
     <>
       <nav className={`navbar ${isScrolled ? "navbar-active" : ""}`}>
@@ -59,7 +57,6 @@ const Navbar = () => {
           <div className="navbar__logo-wrapper">
             <Link to={""}>
               <img src="/images/logo.png" alt="" />
-              <img src="/images/Internatiol.png" alt="" />
             </Link>
           </div>
           <ul className="navbar__links-wrapper">
@@ -71,15 +68,34 @@ const Navbar = () => {
             {links.map((item, i) => {
               return (
                 <li key={i}>
-                  <NavLink
-                    className={getLinkClassName(pathname, item.link)}
-                    to={item.link}
-                  >
-                    {getContent(
-                      translations["ru"][item.link],
-                      translations["uz"][item.link]
-                    )}
-                  </NavLink>
+                  {item.scroll ? (
+                    pathname === "/" ? (
+                      <Scroll
+                        className={""}
+                        activeClass={"active-link"}
+                        to={"section3-page"}
+                        spy={true}
+                        offset={-150}
+                      >
+                        {getContent(
+                          translations["ru"][item.link],
+                          translations["uz"][item.link]
+                        )}
+                      </Scroll>
+                    ) : (
+                      ""
+                    )
+                  ) : (
+                    <NavLink
+                      className={getLinkClassName(pathname, item.link)}
+                      to={item.link}
+                    >
+                      {getContent(
+                        translations["ru"][item.link],
+                        translations["uz"][item.link]
+                      )}
+                    </NavLink>
+                  )}
                 </li>
               );
             })}
