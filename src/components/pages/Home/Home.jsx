@@ -7,6 +7,34 @@ import { Link } from "react-router-dom";
 import { useMediaQuery } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
+import SectionMap from "../../SectionMap/SectionMap";
+
+const staticData = {
+  courses: [
+    {
+      img: "/images/course-img1.png",
+      title_ru: "Курсы Официанта",
+      title_uz: "Курсы Официанта",
+      link: "",
+      created_on: new Date(),
+      short_content_ru:
+        "Мы поможем вам получить все  самые важные и необходимые знания в данной сфере деятельности!",
+      short_content_uz:
+        "Мы поможем вам получить все  самые важные и необходимые знания в данной сфере деятельности!",
+    },
+    {
+      img: "/images/course-img2.png",
+      title_ru: "Курсы Официанта",
+      title_uz: "Курсы Официанта",
+      link: "",
+      created_on: new Date(),
+      short_content_ru:
+        "Мы поможем вам получить все  самые важные и необходимые знания в данной сфере деятельности!",
+      short_content_uz:
+        "Мы поможем вам получить все  самые важные и необходимые знания в данной сфере деятельности!",
+    },
+  ],
+};
 
 const Home = () => {
   const { ref, inView } = useInView({
@@ -19,7 +47,7 @@ const Home = () => {
       .then((res) => console.log(res));
   }, []);
   const { t } = useTranslation();
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(staticData.courses);
   const isDesktop = useMediaQuery("(min-width:900px)");
 
   const animateCard = {
@@ -51,7 +79,7 @@ const Home = () => {
         <div className="course__title">
           <h1>{t("courses.title")}</h1>
         </div>
-        <div className="card-wrapper" ref={ref}>
+        <div className="course-card-wrapper" ref={ref}>
           {data
             ? data
                 ?.filter((item, i) => i < 3)
@@ -64,7 +92,7 @@ const Home = () => {
                       key={i}
                     >
                       <Card
-                        img={process.env.REACT_APP_FILE_URL + item.file_name}
+                        img={item.img}
                         title_ru={item.title_ru}
                         title_uz={item.title_uz}
                         link={item.alias}
@@ -76,7 +104,7 @@ const Home = () => {
                   ) : (
                     <div key={i}>
                       <Card
-                        img={process.env.REACT_APP_FILE_URL + item.file_name}
+                        img={item.img}
                         title_ru={item.title_ru}
                         title_uz={item.title_uz}
                         link={item.alias}
@@ -97,6 +125,7 @@ const Home = () => {
       <Teachers />
       {/* <Section5 /> */}
       <Section6 />
+      <SectionMap />
     </div>
   );
 };

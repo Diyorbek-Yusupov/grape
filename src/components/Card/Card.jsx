@@ -28,7 +28,7 @@ const Card = ({
     <Link to={`/courses/${link}`} className="card-component">
       <div>
         <div className="card-component__img-wrapper">
-          <img src={`${img}`} alt="" />
+          <img src={img} alt="" />
         </div>
         <div className="card-component__title">
           <h1>{shortenString(getContent(title_ru, title_uz), 3)} </h1>
