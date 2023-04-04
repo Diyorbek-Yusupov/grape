@@ -17,7 +17,7 @@ import { getContent } from "../../utils/changeLang";
 const images = [
 	{
 		id: 1,
-		src: "/images/mentor1.jpg",
+		src: "/images/america1.jpg",
 		alt: "Image 1",
 		title: "Title 1",
 		description:
@@ -26,7 +26,7 @@ const images = [
 	},
 	{
 		id: 2,
-		src: "/images/mentor2.jpg",
+		src: "/images/america2.png",
 		alt: "Image 2",
 		title: "Title 2",
 		description:
@@ -35,7 +35,7 @@ const images = [
 	},
 	{
 		id: 2,
-		src: "/images/mentor3.jpg",
+		src: "/images/america3.jpg",
 		alt: "Image 2",
 		title: "Title 2",
 		description:
@@ -44,7 +44,7 @@ const images = [
 	},
 	{
 		id: 2,
-		src: "/images/mentor4.jpg",
+		src: "/images/america4.jpg",
 		alt: "Image 2",
 		title: "Title 2",
 		description:
@@ -53,7 +53,7 @@ const images = [
 	},
 	{
 		id: 1,
-		src: "/images/mentor5.jpg",
+		src: "/images/america5.jpg",
 		alt: "Image 1",
 		title: "Title 1",
 		description:
@@ -198,7 +198,7 @@ const Teachers = () => {
 					)
 				)}
 			</div>
-			<div className="slider-container">
+			{/* <div className="slider-container">
 				<div className="teachers__img-wrapp">
 					<Slider
 						{...settings}
@@ -221,7 +221,7 @@ const Teachers = () => {
 						))}
 					</Slider>
 				</div>
-			</div>
+			</div> */}
 			<div className="teachers__container">
 				{isDesktop ? (
 					<motion.div

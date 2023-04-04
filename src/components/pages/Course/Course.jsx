@@ -17,7 +17,7 @@ const img = [
 
 const staticData = {
   data: {
-    img: img[2],
+    img: "/images/grape1.png",
     title_ru: "Porem ipsum dolor ",
     title_uz: "Porem ipsum dolor",
     link: "",
