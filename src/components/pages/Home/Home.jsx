@@ -55,13 +55,13 @@ const Home = () => {
 		y: inView ? 0 : 50,
 	};
 
-	useEffect(() => {
-		axios
-			.get(`${process.env.REACT_APP_API_URL}courses/get-main`)
-			.then((res) => {
-				setData(res?.data?.data?.result);
-			});
-	}, []);
+	// useEffect(() => {
+	// 	axios
+	// 		.get(`${process.env.REACT_APP_API_URL}courses/get-main`)
+	// 		.then((res) => {
+	// 			setData(res?.data?.data?.result);
+	// 		});
+	// }, []);
 
 	return (
 		<div
