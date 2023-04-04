@@ -250,7 +250,7 @@
 }
 .react-calendar__navigation button:enabled:hover,
 .react-calendar__navigation button:enabled:focus {
-	background-color: rgb(3, 93, 138);
+	background-color: red;
 }
 .react-calendar__month-view__weekdays {
 	text-align: center;
@@ -291,7 +291,7 @@
 }
 
 .react-calendar__year-view__months__month:hover {
-	background-color: rgb(3, 93, 138) !important;
+	background-color: red !important;
 }
 
 .react-calendar__year-view__months__month::after {
