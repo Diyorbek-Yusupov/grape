@@ -2,7 +2,7 @@
 
 .teachers {
 	&__container {
-		max-width: 133rem;
+		// max-width: 133rem;
 		padding: 0 1.5rem;
 		margin: 0 auto;
 	}
@@ -49,8 +49,8 @@
 	}
 
 	&__img {
-		width: 22.9rem !important;
-		height: 29.7rem !important;
+		width: 25rem !important;
+		height: 33rem !important;
 		overflow: hidden;
 
 		@include laptop-xl {
@@ -70,9 +70,9 @@
 	}
 
 	&__info-wrapper {
+		padding: 0 3.5rem;
 		margin: 3.8rem 0 14rem 0;
 		@include between-center;
-
 		@include laptop-xl {
 			flex-direction: column;
 			margin: 3rem 0;
