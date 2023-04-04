@@ -6,94 +6,69 @@ import axios from "axios";
 import { Card } from "../../";
 import { getContent } from "../../../utils/changeLang";
 
-const obj = {
-  img: "https://picsum.photos/400/400",
-  title_ru: "Porem ipsum dolor",
-  title_uz: "Porem ipsum dolor",
-  link: "",
-  date: Date.now(),
-  short_content_ru: "Morem ipsum dolor sit amet, consectetur",
-  short_content_uz: "Morem ipsum dolor sit amet, consectetur",
+const staticData = {
+  data: [
+    {
+      img: "/images/grape1.png",
+      title_ru: "Porem ipsum dolor ",
+      title_uz: "Porem ipsum dolor",
+      link: "",
+      created_on: Date.now(),
+      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
+      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
+    },
+    {
+      img: "/images/grape2.png",
+      title_ru: "Porem ipsum dolor ",
+      title_uz: "Porem ipsum dolor",
+      link: "",
+      created_on: Date.now(),
+      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
+      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
+    },
+    {
+      img: "/images/grape3.png",
+      title_ru: "Porem ipsum dolor ",
+      title_uz: "Porem ipsum dolor",
+      link: "",
+      created_on: Date.now(),
+      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
+      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
+    },
+    {
+      img: "/images/grape4.png",
+      title_ru: "Porem ipsum dolor ",
+      title_uz: "Porem ipsum dolor",
+      link: "",
+      created_on: Date.now(),
+      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
+      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
+    },
+    {
+      img: "/images/grape5.png",
+      title_ru: "Porem ipsum dolor ",
+      title_uz: "Porem ipsum dolor",
+      link: "",
+      created_on: Date.now(),
+      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
+      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
+    },
+    {
+      img: "/images/grape6.png",
+      title_ru: "Porem ipsum dolor ",
+      title_uz: "Porem ipsum dolor",
+      link: "",
+      created_on: Date.now(),
+      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
+      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
+    },
+  ],
 };
 
 const Courses = () => {
   const [current, setCurrent] = useState(0);
-  const [data, setData] = useState([
-    {
-      img: "https://picsum.photos/400/400",
-      title_ru: "Porem ipsum dolor",
-      title_uz: "Porem ipsum dolor",
-      link: "",
-      date: Date.now(),
-      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
-      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
-    },
-    {
-      img: "https://picsum.photos/400/400",
-      title_ru: "Porem ipsum dolor",
-      title_uz: "Porem ipsum dolor",
-      link: "",
-      date: Date.now(),
-      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
-      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
-    },
-    {
-      img: "https://picsum.photos/400/400",
-      title_ru: "Porem ipsum dolor",
-      title_uz: "Porem ipsum dolor",
-      link: "",
-      date: Date.now(),
-      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
-      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
-    },
-    {
-      img: "https://picsum.photos/400/400",
-      title_ru: "Porem ipsum dolor",
-      title_uz: "Porem ipsum dolor",
-      link: "",
-      date: Date.now(),
-      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
-      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
-    },
-  ]);
-  const [filteredData, setFilteredData] = useState([
-    {
-      img: "https://picsum.photos/400/400",
-      title_ru: "Porem ipsum dolor",
-      title_uz: "Porem ipsum dolor",
-      link: "",
-      date: new Date(),
-      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
-      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
-    },
-    {
-      img: "https://picsum.photos/400/400",
-      title_ru: "Porem ipsum dolor",
-      title_uz: "Porem ipsum dolor",
-      link: "",
-      date: new Date(),
-      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
-      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
-    },
-    {
-      img: "https://picsum.photos/400/400",
-      title_ru: "Porem ipsum dolor",
-      title_uz: "Porem ipsum dolor",
-      link: "",
-      date: new Date(),
-      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
-      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
-    },
-    {
-      img: "https://picsum.photos/400/400",
-      title_ru: "Porem ipsum dolor",
-      title_uz: "Porem ipsum dolor",
-      link: "",
-      date: new Date(),
-      short_content_ru: "Morem ipsum dolor sit amet, consectetur",
-      short_content_uz: "Morem ipsum dolor sit amet, consectetur",
-    },
-  ]);
+  const [data, setData] = useState([]);
+  const [filteredData, setFilteredData] = useState(staticData.data);
   const [tab, setTab] = useState(["tab1", "tab2", "tab3", "tab4"]);
 
   useEffect(() => {
@@ -176,7 +151,7 @@ const Courses = () => {
                     transition={{ type: "tween" }}
                   >
                     <Card
-                      img={process.env.REACT_APP_FILE_URL + item.file_name}
+                      img={item.img}
                       title_ru={item.title_ru}
                       title_uz={item.title_uz}
                       link={item.alias}
