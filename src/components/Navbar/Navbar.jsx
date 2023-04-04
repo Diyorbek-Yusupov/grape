@@ -24,7 +24,7 @@ const Navbar = () => {
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}menu/get`).then((res) => {
-      setData(res.data.data.result);
+      setData(res?.data?.data?.result);
     });
     if (pathname === "/") {
       setIsScrolled(false);
