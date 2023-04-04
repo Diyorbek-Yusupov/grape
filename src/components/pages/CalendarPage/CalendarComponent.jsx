@@ -60,9 +60,9 @@ function CalendarComponent({ setFilteredData }) {
   return (
     <Calendar
       locale={"ru"}
-      // formatShortWeekday={(locale, value) =>
-      //   customShortWeekdayFormat[value.getDay()]
-      // }
+      formatShortWeekday={(locale, value) =>
+        customShortWeekdayFormat[value.getDay()]
+      }
       tileClassName={highlightTile}
       onChange={onChange}
       value={value}
