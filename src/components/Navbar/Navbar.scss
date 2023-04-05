@@ -9,6 +9,10 @@
   right: 0;
   z-index: 1100;
 
+  @include phones {
+    padding: 0.3rem 1rem;
+  }
+
   &.navbar-active {
     top: -7rem;
     position: fixed;
@@ -39,7 +43,27 @@
       justify-content: space-between;
       gap: 0.7rem;
       img {
-        width: 100% !important;
+        max-width: 100% !important;
+        @media (max-width: 959px) {
+          &:last-child {
+            display: none;
+          }
+        }
+        @include laptop {
+          &:first-child {
+            width: 30%;
+          }
+        }
+        @include tablet {
+          &:last-child {
+            display: block;
+          }
+        }
+        @include phones {
+          &:first-child {
+            // width: 30%;
+          }
+        }
       }
     }
   }
