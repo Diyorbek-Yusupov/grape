@@ -17,7 +17,7 @@ import { getContent } from "../../utils/changeLang";
 const images = [
 	{
 		id: 1,
-		src: "/images/mentor1.jpg",
+		src: "/images/america1.jpg",
 		alt: "Image 1",
 		title: "Title 1",
 		description:
@@ -26,7 +26,7 @@ const images = [
 	},
 	{
 		id: 2,
-		src: "/images/mentor2.jpg",
+		src: "/images/america2.png",
 		alt: "Image 2",
 		title: "Title 2",
 		description:
@@ -35,7 +35,7 @@ const images = [
 	},
 	{
 		id: 2,
-		src: "/images/mentor3.jpg",
+		src: "/images/america3.jpg",
 		alt: "Image 2",
 		title: "Title 2",
 		description:
@@ -44,7 +44,7 @@ const images = [
 	},
 	{
 		id: 2,
-		src: "/images/mentor4.jpg",
+		src: "/images/america4.jpg",
 		alt: "Image 2",
 		title: "Title 2",
 		description:
@@ -53,7 +53,7 @@ const images = [
 	},
 	{
 		id: 1,
-		src: "/images/mentor5.jpg",
+		src: "/images/america5.jpg",
 		alt: "Image 1",
 		title: "Title 1",
 		description:
@@ -87,13 +87,14 @@ function CustomRightArrow({ className, style, onClick }) {
 }
 
 const Teachers = () => {
-	const [data, setData] = useState([]);
+	const [data, setData] = useState([images]);
 	const [selectedImage, setSelectedImage] = useState(null);
 	const { ref, inView } = useInView({
 		threshold: 0.5,
 	});
 
 	useEffect(() => {
+		return
 		axios
 			.get(`${process.env.REACT_APP_API_URL}teachers/get-main`)
 			.then((res) => {
@@ -103,9 +104,9 @@ const Teachers = () => {
 			});
 	}, []);
 
-	useEffect(() => {
-		setSelectedImage(data[0]);
-	}, [data]);
+	// useEffect(() => {
+	// 	setSelectedImage(data[0]);
+	// }, [data]);
 	let slidesShow = data?.length >= 5 ? 5 : data?.length;
 	const settings = {
 		dots: false,
@@ -197,7 +198,7 @@ const Teachers = () => {
 					)
 				)}
 			</div>
-			<div className="slider-container">
+			{/* <div className="slider-container">
 				<div className="teachers__img-wrapp">
 					<Slider
 						{...settings}
@@ -220,7 +221,7 @@ const Teachers = () => {
 						))}
 					</Slider>
 				</div>
-			</div>
+			</div> */}
 			<div className="teachers__container">
 				{isDesktop ? (
 					<motion.div

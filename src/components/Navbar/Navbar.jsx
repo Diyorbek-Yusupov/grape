@@ -57,6 +57,7 @@ const Navbar = () => {
 					<div className="navbar__logo-wrapper">
 						<Link to={""}>
 							<img src="/images/logo.png" alt="" />
+							<img src="/images/Internatiol.png" alt="" />
 						</Link>
 					</div>
 					<ul className="navbar__links-wrapper">
@@ -68,7 +69,7 @@ const Navbar = () => {
 						{links.map((item, i) => {
 							return (
 								<li key={i}>
-									{item.scroll ? (
+									{/* {item.scroll ? (
 										pathname === "/" ? (
 											<Scroll
 												className={""}
@@ -85,7 +86,7 @@ const Navbar = () => {
 										) : (
 											""
 										)
-									) : (
+									) : ( */}
 										<NavLink
 											className={getLinkClassName(pathname, item.link)}
 											to={item.link}
@@ -95,7 +96,7 @@ const Navbar = () => {
 												translations["uz"][item.link]
 											)}
 										</NavLink>
-									)}
+									{/* )} */}
 								</li>
 							);
 						})}
