@@ -33,7 +33,7 @@ export const links = [
     drop: false,
     label: "о нас",
     link: "about",
-    scroll: true,
+    scroll: false,
   },
   {
     drop: false,
