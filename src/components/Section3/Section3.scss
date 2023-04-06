@@ -1,214 +1,217 @@
 @import "../../styles/styles.scss";
 
 .section3-page {
-  margin: 3rem 0 5rem 0;
+	margin: 3rem 0 5rem 0;
 
-  &__container {
-    max-width: 180rem;
-    margin: 0 auto;
-  }
+	&__container {
+		max-width: 180rem;
+		margin: 0 auto;
+	}
 
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    // background-color: red;
-    width: 100%;
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		// background-color: red;
+		width: 100%;
 
-    @include laptop-xxl {
-      flex-direction: column-reverse;
-    }
-  }
-  &__right {
-    display: flex;
-    width: 100%;
-    justify-content: end;
-    padding: 0;
-    @include laptop-xxl {
-      justify-content: center;
-      margin-top: 3rem;
-    }
+		@include laptop-xxl {
+			flex-direction: column-reverse;
+		}
+	}
+	&__right {
+		display: flex;
+		width: 100%;
+		justify-content: end;
+		padding: 0;
+		@include laptop-xxl {
+			justify-content: center;
+			margin-top: 3rem;
+		}
 
-    .section3-card-header {
-      font-size: 2.6rem;
-      display: block;
-      color: black;
-      margin-bottom: 2rem;
-      font-weight: 900;
-      @include laptop {
-        text-align: center;
-      }
-      @include tablet {
-        // padding: 0 2rem;
-      }
-    }
+		.section3-card-header {
+			font-size: 2.6rem;
+			display: block;
+			color: black;
+			margin-bottom: 2rem;
+			font-weight: 900;
+			@include laptop {
+				text-align: center;
+			}
+			@include tablet {
+				// padding: 0 2rem;
+			}
+		}
 
-    .section3-wrapper {
-      // transform: translateX(5rem);
-      position: relative;
-      z-index: 3;
-      @include laptop-xxl {
-        transform: translateX(0rem);
-      }
-    }
+		.section3-wrapper {
+			// transform: translateX(5rem);
+			position: relative;
+			z-index: 3;
+			@include laptop-xxl {
+				transform: translateX(0rem);
+			}
+		}
 
-    div.section3-card {
-      background-color: $reddishBrown;
-      padding: 4.5rem 8.8rem;
+		div.section3-card {
+			background-color: $reddishBrown;
+			padding: 4.5rem 8.8rem;
 
-      @include tablet {
-        padding: 4rem;
-      }
-    }
+			@include tablet {
+				padding: 4rem;
+			}
+		}
 
-    h1 {
-      font-size: 3.6rem;
-      color: $white;
-      font-family: "NextArt-Bold", sans-serif;
+		h1 {
+			font-size: 3.6rem;
+			color: $white;
+			font-family: "NextArt-Bold", sans-serif;
 
-      @include tablet {
-        font-size: 2.5rem;
-      }
-    }
+			@include tablet {
+				font-size: 2.5rem;
+				text-align: center;
 
-    p {
-      margin: 2.4rem 0;
-      font-size: 2.4rem;
-      color: $white;
+			}
+		}
 
-      @include tablet {
-        font-size: 1.5rem;
-      }
-    }
-  }
+		p {
+			margin: 2.4rem 0;
+			font-size: 2.4rem;
+			color: $white;
 
-  &__desc-header {
-    font-family: "NextArt-semibold", sans-serif;
-  }
+			@include tablet {
+				font-size: 1.5rem;
+				text-align: center;
+			}
+		}
+	}
 
-  &__desc {
-    line-height: 3.3rem;
-  }
+	&__desc-header {
+		font-family: "NextArt-semibold", sans-serif;
+	}
 
-  &__desc-price {
-    font-family: "NextArt-Bold", sans-serif;
-    font-size: 3.2rem !important;
+	&__desc {
+		line-height: 3.3rem;
+	}
 
-    @include tablet {
-      font-size: 2.5rem !important;
-    }
-  }
+	&__desc-price {
+		font-family: "NextArt-Bold", sans-serif;
+		font-size: 3.2rem !important;
 
-  button {
-    padding: 1.5rem 3rem;
-    color: $white;
-    font-size: 2.8rem;
-    background-color: $red;
+		@include tablet {
+			font-size: 2.5rem !important;
+		}
+	}
 
-    @include tablet {
-      font-size: 2rem;
-    }
-  }
+	button {
+		padding: 1.5rem 3rem;
+		color: $white;
+		font-size: 2.8rem;
+		background-color: $red;
 
-  &__left {
-    @include laptop-xxl {
-      display: none;
-    }
-    .section3-left-imgWrapper {
-      width: 61.7rem;
-      overflow: hidden;
+		@include tablet {
+			font-size: 2rem;
+		}
+	}
 
-      img {
-        width: 100%;
-        transition: all 0.2s ease;
-      }
+	&__left {
+		@include laptop-xxl {
+			display: none;
+		}
+		.section3-left-imgWrapper {
+			width: 61.7rem;
+			overflow: hidden;
 
-      &:hover img {
-        transform: scale(1.1);
-      }
+			img {
+				width: 100%;
+				transition: all 0.2s ease;
+			}
 
-      @include laptop-xxl {
-        width: 100%;
-      }
-    }
-  }
+			&:hover img {
+				transform: scale(1.1);
+			}
 
-  &__section-2 {
-    margin-top: 5rem;
-  }
+			@include laptop-xxl {
+				width: 100%;
+			}
+		}
+	}
 
-  &__sectoin-2-container {
-    max-width: 133rem;
-    margin: 0 auto;
+	&__section-2 {
+		margin-top: 5rem;
+	}
 
-    h1 {
-      font-size: 4.4rem;
-      font-family: "NextArt-Bold", sans-serif;
-      color: #414141;
-      margin-bottom: 5.8rem;
-      text-align: center;
-    }
-  }
+	&__sectoin-2-container {
+		max-width: 133rem;
+		margin: 0 auto;
 
-  &__sectoin-2-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0 2rem;
+		h1 {
+			font-size: 4.4rem;
+			font-family: "NextArt-Bold", sans-serif;
+			color: #414141;
+			margin-bottom: 5.8rem;
+			text-align: center;
+		}
+	}
 
-    @include laptop-xl {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+	&__sectoin-2-wrapper {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding: 0 2rem;
 
-  &__cards {
-    width: 45%;
-    background-color: blanchedalmond;
-    display: flex;
-    padding: 0 1rem;
-    align-items: center;
-    margin-bottom: 2rem;
+		@include laptop-xl {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
 
-    @include laptop-xl {
-      width: 52rem;
-    }
+	&__cards {
+		width: 45%;
+		background-color: blanchedalmond;
+		display: flex;
+		padding: 0 1rem;
+		align-items: center;
+		margin-bottom: 2rem;
 
-    @include phones {
-      width: 100%;
-    }
+		@include laptop-xl {
+			width: 52rem;
+		}
 
-    &:nth-child(2) {
-      background-color: $green;
-    }
+		@include phones {
+			width: 100%;
+		}
 
-    &:nth-child(3) {
-      background-color: $red;
-    }
+		&:nth-child(2) {
+			background-color: $green;
+		}
 
-    &:nth-child(1),
-    &:nth-child(4) {
-      background-color: $blue;
-    }
+		&:nth-child(3) {
+			background-color: $red;
+		}
 
-    p {
-      font-size: 2.4rem;
-      line-height: 3.3rem;
-      color: $white;
+		&:nth-child(1),
+		&:nth-child(4) {
+			background-color: $blue;
+		}
 
-      @include laptop-xl {
-        font-size: 2rem;
-      }
+		p {
+			font-size: 2.4rem;
+			line-height: 3.3rem;
+			color: $white;
 
-      @include phones {
-        font-size: 1.6rem;
-      }
-    }
+			@include laptop-xl {
+				font-size: 2rem;
+			}
 
-    img {
-      @include phones {
-        width: 13rem;
-      }
-    }
-  }
+			@include phones {
+				font-size: 1.6rem;
+			}
+		}
+
+		img {
+			@include phones {
+				width: 13rem;
+			}
+		}
+	}
 }
