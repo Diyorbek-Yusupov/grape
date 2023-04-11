@@ -4,7 +4,7 @@ import "react-notifications/lib/notifications.css";
 import { Routes, Route } from "react-router-dom";
 import Auth from "./components/auth/Auth";
 import Pages from "./components/pages/Pages";
- import Users from "./components/pages/users/Users";
+import Users from "./components/pages/users/Users";
 import UserCreate from "./components/pages/users/userCreate/UserCreate";
 import UserView from "./components/pages/users/userView/UserView";
 import Menu from "./components/pages/menu/Menu";
